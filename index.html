@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABODA AI - Liquid Glass Photo Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes gradient-move {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient-move 5s ease infinite;
+      }
+      @keyframes rgb-glow {
+        0% { box-shadow: 0 0 3px #ff00de, 0 0 5px #ff00de, 0 0 8px #ff00de; }
+        33% { box-shadow: 0 0 3px #00c3ff, 0 0 5px #00c3ff, 0 0 8px #00c3ff; }
+        66% { box-shadow: 0 0 3px #00ff95, 0 0 5px #00ff95, 0 0 8px #00ff95; }
+        100% { box-shadow: 0 0 3px #ff00de, 0 0 5px #ff00de, 0 0 8px #ff00de; }
+      }
+      .rgb-glow-effect {
+        animation: rgb-glow 4s linear infinite;
+        border-radius: 0.75rem; /* rounded-lg */
+      }
+      @keyframes rgb-text-glow {
+        0% { text-shadow: 0 0 2px #ff00de, 0 0 4px #ff00de, 0 0 6px #ff00de; }
+        33% { text-shadow: 0 0 2px #00c3ff, 0 0 4px #00c3ff, 0 0 6px #00c3ff; }
+        66% { text-shadow: 0 0 2px #00ff95, 0 0 4px #00ff95, 0 0 6px #00ff95; }
+        100% { text-shadow: 0 0 2px #ff00de, 0 0 4px #ff00de, 0 0 6px #ff00de; }
+      }
+      .tagline-effect {
+        background: linear-gradient(90deg, #ff00de, #00c3ff, #00ff95, #ff00de);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-move 5s ease infinite, rgb-text-glow 4s linear infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

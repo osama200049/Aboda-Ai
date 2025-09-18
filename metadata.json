@@ -1,0 +1,5 @@
+{
+  "name": " ABODA AI - V2.0 - Ai Photo Editor",
+  "description": "An AI-powered photo editor with a futuristic liquid glass interface. Use a lasso tool to select an area of an image and describe your desired changes with a text prompt to generate stunning edits using the Gemini API.",
+  "requestFramePermissions": []
+}
